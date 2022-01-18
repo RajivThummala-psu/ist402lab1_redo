@@ -1,0 +1,35 @@
+<!DOCTYPE html>  <!--/a document declaration that is found at the top of every html file. It indicates that html code follows -->
+<!-- saved from url=(0027)http://localhost:8001/demo/ -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- style tag indicates that css will follow -->
+  <style> 
+    body {
+      background: #fafafa; /*indicates the background color of white*/
+    }
+  </style>
+</head> <!-- ends the head tag and </style> ends the style tag-->
+<body data-new-gr-c-s-check-loaded="14.1044.0" data-gr-ext-installed="">
+  <div id="demo"></div> 
+
+  <script type="module"> //this part seems to be identifying the type of javascript that will be following. I am unsure what is meant by "module"
+    import { html, render } from './../node_modules/lit/index.js'; //this part looks like it is rendering some html from a link
+    import './../hello-world_RajivLab1.js'; //this part is importing my github repo
+
+    const title = 'Hello owc World!'; //this part is setting the title of the constant I believe (unsure if const is the abbreviation for constant)
+    render( //this part appears to be rendering some html from my github repo
+    //follow up: after referencing lit.dev, render is used to measure any time reactive properties that are changing.
+      html`
+        <hello-world_RajivLab1 .title=${title}>
+          some light-dom
+        </hello-world_RajivLab1>
+      `,
+
+      //not sure what this # is used for. In python I remember it being used for comments I believe
+      document.querySelector('#demo') /*don't really have a guess for what this is at all. Seems like it will need to be required. I am not familiar
+      with this syntax (never really seen a comma used like this in other languages*/
+    );
+  </script> <!-- ends the javascript file-->
+<!-- injected by web-dev-server -->
+<script type="module" src="./localhost_files/__web-dev-server__web-socket.js.download"></script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
